@@ -1,63 +1,61 @@
-# assimilate-databricks
-A repo to assimilate databricks
+## Amazon Food Recommendation
 
-## API Getting Started
+This project trains a Neural Network model with sentiment analysis to provide customers with food recommendations, based on their purchase and review history. The dataset is then deployed on Azure Databricks for query.
 
-![databricks-api](https://user-images.githubusercontent.com/58792/189719737-fcdaf61f-93d2-415b-8eea-ebb96143187d.png)
+## Flow Chart
+
+![image-20220918231829294](Flowchart.png)
+
+## Databricks
 
 
 
-## Setup auth
+### Setup Auth
 
-[databricks-python](https://docs.microsoft.com/en-us/azure/databricks/dev-tools/python-api)
+Place Databricks' authentication information in CodeSpaces secrets.
 
-Place in Codespace secrets
-* [unix, linux, mac](https://docs.microsoft.com/en-us/azure/databricks/dev-tools/python-api#unixlinuxandmacos)
-
-```bash
+```shell
 DATABRICKS_HOST
+DATABRICKS_HTTP_PATH
+DATABRICKS_SERVER_HOSTNAME
 DATABRICKS_TOKEN
 ```
 
+### Test out CLI
 
-## Test out CLI
-
-```
+```shell
 databricks clusters list --output JSON | jq
 databricks fs ls dbfs:/
 databricks jobs list --output JSON | jq
 ```
-## Remote connect
+
+### Remote connect
 
 [databricks-connect](https://docs.databricks.com/dev-tools/databricks-connect.html)
 
-## Databricks SQL Connector
+
+
+### Databricks SQL Connector
 
 [Setup table first!](https://docs.databricks.com/dbfs/databricks-datasets.html)
 
 [sql remote](https://docs.databricks.com/dev-tools/python-sql-connector.html)
-https://docs.databricks.com/integrations/bi/jdbc-odbc-bi.html#connection-details-cluster
 
 
-## Comparing to Dask
 
-An alternative solution to Databricks is https://tutorial.dask.org/00_overview.html[Dask] or [Ray](https://docs.ray.io/en/latest/data/dask-on-ray.html).
+## Data
 
-### Distributed compute
+This project makes use of the Amazon Fine Foods Review dataset. This consists of 10 data fields and ~568,00 records. This app utilizes the following records from the dataset: ProductId, UserId, Rate, and Preview.
 
-* [Quickstart distributed compute example](https://distributed.dask.org/en/stable/quickstart.html)
-* [For Advanced users (HDFS wordcount Enron)](https://distributed.dask.org/en/stable/examples/word-count.html)
+[dataset](https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews)
 
-### Hands on Enron
+## Streamlit Example
 
-* [Download data](https://www.kaggle.com/datasets/wcukierski/enron-email-dataset) from Kaggle and upload by right-click on explorer in GitHub Codespaces
-* place in a "datasets" directory and add this directory to your `.gitignore`.  This ensures you don't check in a 1GB file to GitHub.
+```shel
+streamlit run app.py
+```
 
-### Streamlit Example
 
-Enable enron...
 
-`streamlit hello --server.enableCORS=false`
-`streamlit run hello_streamlit_enron.py --server.enableCORS=false`
 
 
