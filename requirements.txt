@@ -13,4 +13,10 @@ dask[distributed]
 jupyter
 s3fs
 bokeh
-streamlit
+matplotlib
+nltk==3.7
+streamlit==1.12.2
+pandas==1.4.4
+numpy==1.23.3
+sklearn==0.0
+torch==1.12.1
