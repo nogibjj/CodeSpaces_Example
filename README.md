@@ -45,7 +45,7 @@ databricks jobs list --output JSON | jq
 
 ## Data
 
-This project makes use of the Amazon Fine Foods Review dataset. This consists of 10 data fields and ~568,00 records. This app utilizes the following records from the dataset: ProductId, UserId, Rate, and Preview.
+This project makes use of the Amazon Fine Foods Review dataset. This consists of 10 data fields and ~568,000 records. This app utilizes the following records from the dataset: ProductId, UserId, Rate, and Preview.
 
 [dataset](https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews)
 
