@@ -6,9 +6,17 @@ This project trains a Neural Network model with sentiment analysis to provide cu
 
 ![image-20220918231829294](Flowchart.png)
 
+
+
+## Data
+
+This project makes use of the Amazon Fine Foods Review dataset. This consists of 10 data fields and ~568,000 records. This app utilizes the following records from the dataset: ProductId, UserId, Rate, and Preview.
+
+[dataset](https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews)
+
+
+
 ## Databricks
-
-
 
 ### Setup Auth
 
@@ -42,12 +50,6 @@ databricks jobs list --output JSON | jq
 [sql remote](https://docs.databricks.com/dev-tools/python-sql-connector.html)
 
 
-
-## Data
-
-This project makes use of the Amazon Fine Foods Review dataset. This consists of 10 data fields and ~568,000 records. This app utilizes the following records from the dataset: ProductId, UserId, Rate, and Preview.
-
-[dataset](https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews)
 
 ## Streamlit Example
 
